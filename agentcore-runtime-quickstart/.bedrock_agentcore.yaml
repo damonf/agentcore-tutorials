@@ -1,0 +1,38 @@
+default_agent: yellow
+agents:
+  yellow:
+    name: yellow
+    entrypoint: yellow.py
+    platform: linux/arm64
+    container_runtime: docker
+    aws:
+      execution_role: arn:aws:iam::643917810259:role/AmazonBedrockAgentCoreSDKRuntime-us-west-2-c685a2c9ba
+      execution_role_auto_create: false
+      account: '643917810259'
+      region: us-west-2
+      ecr_repository: 643917810259.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-yellow
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: yellow-03ZIWi64Er
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:643917810259:runtime/yellow-03ZIWi64Er
+      agent_session_id: fcae0a46-44f9-4cd4-abf1-943ac94b4859
+    codebuild:
+      project_name: bedrock-agentcore-yellow-builder
+      execution_role: arn:aws:iam::643917810259:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-c685a2c9ba
+      source_bucket: bedrock-agentcore-codebuild-sources-643917810259-us-west-2
+    memory:
+      mode: STM_ONLY
+      memory_id: yellow_mem-kW90Pw3Z6m
+      memory_arn: arn:aws:bedrock-agentcore:us-west-2:643917810259:memory/yellow_mem-kW90Pw3Z6m
+      memory_name: yellow_mem
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
