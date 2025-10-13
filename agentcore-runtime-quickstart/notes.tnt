@@ -1,0 +1,4 @@
+
+The tutorial is wrong.
+You need to specify the model_id with the full ARN of the model to get
+it to use us-west-2.  See my comments in the code.
