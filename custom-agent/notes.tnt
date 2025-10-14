@@ -1,0 +1,6 @@
+Following this tutorial:
+https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/getting-started-custom.html
+
+* You can't run the docker locally becuase it's ARM
+* The tutorial doesn't including creating the role, so i used an
+  existing role from another tutorial
