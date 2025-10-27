@@ -1,3 +1,5 @@
+tutorial:
+https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-get-started-toolkit.html
 
 The tutorial is wrong.
 You need to specify the model_id with the full ARN of the model to get
